@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Whatismyip - Know your real ip adress</title>
+<meta name="description" content="Know your real ip adress, ip adress lookup, what is my ip adress." />
+<meta name="keywords" content="what is my ip,know your ip,ip adress lookup." />
+	
+	<style>
+	p, h1 {
+		color: green;
+	}
+	</style>
+
+	<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+	
+	<script>
+	
+	/* Add "https://api.ipify.org?format=json" statement
+			this will communicate with the ipify servers in
+			order to retrieve the IP address $.getJSON will
+			load JSON-encoded data from the server using a
+			GET HTTP request */
+				
+	$.getJSON("https://api.ipify.org?format=json", function(data) {
+		
+		// Setting text of element P with id gfg
+		$("#gfg").html(data.ip);
+	})
+	</script>
+</head>
+
+<body>
+	<center>
+		<h1>Your Real IP</h1>
+		<h3>Public IP Address of user is:</h3>
+		<p id="gfg"></p>
+
+	</center>
+        	<center><center> <a href="https://www.torproject.org/download/"><img src="sitesimages/torbrowser.png" width="420" height="120" alt=""/></a></center>	</center>
+</body>
+
+</html>
